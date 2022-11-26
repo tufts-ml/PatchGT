@@ -162,7 +162,7 @@ class patchGT_TU(torch.nn.Module):
 				relative_pos,
 				torch.norm(relative_pos, dim=-1, keepdim=True)), dim=-1)
 		edge_index = torch.cat((senders.unsqueeze(0), receivers.unsqueeze(0)), dim=0)
-		graph = Data(x=x, edge_index=edge_index, edge_attr=edge_attr)
+		graph = Data(x=x, edge_index=edge_index)
 
 		return graph.to(self.device)
 

@@ -31,7 +31,7 @@ if __name__ == '__main__':
 
     dataloader_train = DataLoader(traingraphs, batch_size=args.batch_size, shuffle=False, drop_last=True)
 
-    dataloader_test = DataLoader(testgraphs, batch_size=args.test_batch_size, shuffle=False, drop_last=True)
+    dataloader_test = DataLoader(testgraphs, batch_size=args.test_batch_size, shuffle=False, drop_last=False)
     if args.optimizer == 'auroc':
         args.imratio = float((dataloader_train.dataset.data.y.sum() / dataloader_train.dataset.data.y.shape[0]).numpy())
 

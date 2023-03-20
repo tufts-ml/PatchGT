@@ -23,8 +23,8 @@ class Args:
 
         # dataset
         self.parser.add_argument('--dataset', default="DD", help='Select datase -- ogbg-molhiv | ogbg-molpcba| ogbg-ppa | ogbg-molbace|ogbg-molbbbp | PROTEINS| DD |MUTAG|PTC_MR|COLLAB|Mutagenicity|ENZYMES')
-        self.parser.add_argument('--batch_size', type=int, default=128, help='batch size') #DD 6
-        self.parser.add_argument('--test_batch_size', type=int, default=128, help='test batch size')
+        self.parser.add_argument('--batch_size', type=int, default=64, help='batch size') #DD 6
+        self.parser.add_argument('--test_batch_size', type=int, default=16, help='test batch size')
         self.parser.add_argument('--load_processed_dataset', default=False, action='store_true',
                                  help='whether to load dataset')
         self.parser.add_argument('--save_processed_dataset', default=False, action='store_true',
